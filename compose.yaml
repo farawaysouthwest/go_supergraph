@@ -1,0 +1,11 @@
+services:
+  users-graph:
+    build: ./users
+  accounts-graph:
+    build: ./account
+  subscriptions-graph:
+    build: ./subscriptions
+  router:
+    build: ./router
+    ports:
+      - "4000:4000"

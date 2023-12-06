@@ -1,0 +1,14 @@
+federation_version: =2.3.2
+subgraphs:
+  accounts:
+    routing_url: http://accounts-graph:8081/graphql
+    schema:
+      file: ../account/graph/schema.graphqls
+  subscriptions:
+    routing_url: http://subscriptions-graph:8082/graphql
+    schema:
+      file: ../subscriptions/graph/schema.graphqls
+  users:
+    routing_url: http://users-graph:8080/graphql
+    schema:
+      file: ../users/graph/schema.graphqls

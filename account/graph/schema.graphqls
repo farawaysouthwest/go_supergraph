@@ -1,0 +1,15 @@
+enum AccountType {
+  SAVINGS
+  CHECKING
+  CREDIT
+}
+
+type Account @key(fields: "id") {
+  id: ID!
+  accountType: AccountType!
+}
+
+type User @key(fields: "id") {
+  id: ID!
+  accounts: [Account!]
+}

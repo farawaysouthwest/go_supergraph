@@ -1,0 +1,14 @@
+enum PlanType {
+  FREE
+  PAID
+}
+
+type plan {
+  id: ID!
+  type: PlanType!
+}
+
+type Account @key(fields: "id") {
+  id: ID!
+  subscription: plan!
+}
